@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zainab &amp; Farhat · Wedding Invitation</title>
+<!-- Link preview in WhatsApp. For og:image use the full link once hosted, e.g. https://yourname.github.io/wedding/preview.jpg -->
+<meta property="og:title" content="You’re invited to Zainab &amp; Farhat wedding">
+<meta property="og:description" content="Mehndi, Barat and Walima. Tap to open your invitation.">
+<meta property="og:image" content="preview.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#4a0a16">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Noto+Nastaliq+Urdu:wght@500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:"Cormorant Garamond",Georgia,serif;background:#4a0a16;color:#fff8e8;overflow-x:hidden;font-size:19px;line-height:1.5}
+body.lock{overflow:hidden;height:100vh}
+.ur{font-family:"Noto Nastaliq Urdu","Jameel Noori Nastaleeq",serif;line-height:2.2}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:5}
+
+/* Opening: velvet curtains */
+#gate{position:fixed;inset:0;z-index:50;display:grid;place-items:center}
+.cu{position:absolute;top:0;bottom:0;width:50%;transition:transform 1.8s cubic-bezier(.7,0,.2,1);
+background:repeating-linear-gradient(90deg,#6b0f20 0 18px,#8a1428 18px 34px,#5a0c1a 34px 48px);box-shadow:inset 0 0 90px #0008}
+.cu.l{left:0;border-right:3px solid #e8c066}.cu.r{right:0;border-left:3px solid #e8c066}
+#gate.open .l{transform:translateX(-101%)}#gate.open .r{transform:translateX(101%)}
+#seal{position:relative;z-index:2;width:170px;height:170px;border-radius:50%;border:0;cursor:pointer;color:#4a0a16;
+background:radial-gradient(circle at 35% 30%,#fff1b8,#e8c066 55%,#a77a25);box-shadow:0 0 0 6px #e8c06655,0 10px 40px #000a;
+font:700 20px/1.2 "Cormorant Garamond",serif;animation:pulse 2s infinite;transition:opacity .5s,transform .5s}
+#seal small{display:block;font-size:14px;font-weight:500;margin-top:4px}
+#gate.open #seal{opacity:0;transform:scale(1.6);pointer-events:none}
+@keyframes pulse{50%{box-shadow:0 0 0 18px #e8c06622,0 10px 40px #000a}}
+
+/* Sections */
+section{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:64px 22px;position:relative}
+h1{font-size:clamp(46px,13vw,92px);font-weight:700;line-height:1.05;color:#f3d27a}
+h2{font-size:clamp(40px,11vw,66px);font-weight:700;line-height:1.1}
+.amp{display:block;font-style:italic;font-size:.5em;font-weight:500;color:#fff8e8;margin:4px 0}
+.hero{background:radial-gradient(ellipse at 50% 0,#7a1428,#4a0a16 70%)}
+.hero p{max-width:30ch;margin-top:14px;opacity:.92}
+.hi{font-size:26px;color:#f3d27a;font-style:italic;margin-top:18px;min-height:1.5em}
+.hint{position:absolute;bottom:22px;font-size:16px;opacity:.7;animation:bob 2s infinite}
+@keyframes bob{50%{transform:translateY(8px)}}
+
+.ev{background:linear-gradient(170deg,var(--b1),var(--b2));color:var(--fg)}
+.ev .ur{font-size:30px;color:var(--ac)}
+.ev .box{margin-top:22px;border:2px solid var(--ac);border-radius:4px 28px 4px 28px;padding:26px 24px;max-width:420px;width:100%;background:var(--bx);
+opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}
+.ev.in .box{opacity:1;transform:none}
+.when{font-size:22px;font-weight:700;color:var(--ac)}
+.venue{margin-top:6px}.note{margin-top:8px;font-style:italic;opacity:.85}
+.cd{display:flex;justify-content:center;gap:10px;margin:18px 0}
+.cd span{min-width:62px;padding:8px 4px;border:1px solid var(--ac);border-radius:10px}
+.cd b{display:block;font-size:30px;line-height:1.1}.cd i{font-size:13px;font-style:normal;opacity:.8}
+.btn{display:inline-block;margin:4px;padding:11px 22px;border-radius:30px;border:2px solid var(--ac);background:var(--ac);color:var(--b2);
+font:700 18px "Cormorant Garamond",serif;text-decoration:none;cursor:pointer}
+.btn.o{background:transparent;color:var(--ac)}
+.btn:focus-visible,#seal:focus-visible,#mu:focus-visible,select:focus-visible{outline:3px solid #fff;outline-offset:3px}
+
+.mehndi{--b1:#0f3a22;--b2:#1f5a30;--fg:#fff8dc;--ac:#f7bf2d;--bx:#0a2a1799}
+.barat{--b1:#5a0c1a;--b2:#2a0510;--fg:#fff3d6;--ac:#f0cd7a;--bx:#1a030a88}
+.walima{--b1:#fbf6ee;--b2:#eadcc4;--fg:#4a3b2a;--ac:#9a7132;--bx:#fffaf1cc}
+.walima .btn{color:#fff8e8}.walima .btn.o{color:#7a5622}
+.rsvp{background:#2a0510}.rsvp select{margin:14px 0;padding:10px 14px;font:inherit;border-radius:8px;border:2px solid #f0cd7a;background:#fff8e8;color:#4a0a16}
+footer{padding:30px 20px 90px;text-align:center;background:#2a0510;color:#f0cd7a;font-style:italic}
+
+#mu{position:fixed;right:14px;bottom:14px;z-index:60;width:48px;height:48px;border-radius:50%;border:2px solid #f0cd7a;background:#4a0a16cc;color:#f0cd7a;font-size:22px;cursor:pointer;display:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}}
+</style>
+</head>
+<body class="lock">
+
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<div id="gate">
+  <div class="cu l"></div><div class="cu r"></div>
+  <button id="seal" aria-label="Open the invitation">Open<small>tap here</small></button>
+</div>
+
+<section class="hero" data-th="hero">
+  <p class="ur" style="font-size:26px;color:#f3d27a">بسم اللہ الرحمٰن الرحیم</p>
+  <p id="hi" class="hi"></p>
+  <h1 id="names"></h1>
+  <p>request the honour of your presence at the celebration of their wedding</p>
+  <span class="hint">scroll down ↓</span>
+</section>
+
+<div id="events"></div>
+
+<section class="rsvp" data-th="hero">
+  <h2 style="color:#f3d27a">Will you join us?</h2>
+  <p style="max-width:30ch;margin-top:8px">Your reply opens in WhatsApp. Just press send.</p>
+  <label for="g" style="margin-top:18px">Number of guests</label>
+  <select id="g"></select>
+  <div><a id="yes" class="btn" href="#" target="_blank" rel="noopener">Yes, we’ll be there</a>
+  <a id="no" class="btn o" href="#" target="_blank" rel="noopener">Sorry, we can’t come</a></div>
+</section>
+
+<footer id="ft"></footer>
+<button id="mu" aria-label="Turn music on or off">♪</button>
+
+<script>
+/* ========== EDIT THIS PART ========== */
+const C={
+  couple:["Zainab","Farhat"],
+  wa:"923285155122",          // WhatsApp number for RSVP: country code + number, no + or spaces
+  music:"music.mp3",          // put your song in the same folder; set to "" for no music
+  footer:"With love, the Khan & Malik families",
+  events:[
+    {key:"mehndi",title:"Mehndi",ur:"مہندی",date:"2027-02-04T24:00:00+05:00",
+     when:"Thursday, 4th February 2027 · 6:00 PM",venue:"Rose Garden Marquee, Lahore",
+     map:"https://maps.app.goo.gl/dNJkPhzDrvqoCCDSA",note:"Come in yellow and green. Dholki and Injoy the Mehndi night."},
+    {key:"barat",title:"Barat",ur:"بارات",date:"2027-02-05T24:00:00+05:00",
+     when:"Friday, 5th February 2027 · 1:00 PM",venue:"Grace Orchard Marquee, Lahore",
+     map:"https://maps.app.goo.gl/fNPjyvdojtkPYgcQA",note:"Dinner will be served after the rukhsati."},
+    {key:"walima",title:"Walima",ur:"ولیمہ",date:"2027-02-06T24:00:00+05:00",
+     when:"Saturday, 6th February 2027 · 6:00 PM",venue:"Garden Pavilion, Sheikhupura",
+     map:"https://maps.app.goo.gl/YxKkoBoS9Xuz7evR9",note:"A relaxed afternoon lunch with family."}
+  ]
+};
+/* ==================================== */
+
+const $=s=>document.querySelector(s);
+const nm=(new URLSearchParams(location.search).get("name")||"").slice(0,40).trim();
+$("#names").innerHTML=C.couple[0]+'<span class="amp">&amp;</span>'+C.couple[1];
+$("#hi").textContent=nm?"Dear "+nm+", aap ko dawat hai!":"Aap ko dawat hai!";
+$("#ft").textContent=C.footer;
+document.title=C.couple.join(" & ")+" · Wedding Invitation";
+
+/* Build the function sections */
+C.events.forEach(e=>{
+  const s=document.createElement("section");
+  s.className="ev "+e.key;s.dataset.th=e.key;
+  s.innerHTML='<p class="ur">'+e.ur+'</p><h2>'+e.title+'</h2><div class="box">'+
+    '<div class="cd" data-t="'+e.date+'"></div>'+
+    '<p class="when">'+e.when+'</p><p class="venue">'+e.venue+'</p><p class="note">'+e.note+'</p>'+
+    '<p style="margin-top:14px"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(e.map)+'">Open map</a></p></div>';
+  $("#events").appendChild(s);
+});
+
+/* Countdowns */
+function tick(){
+  document.querySelectorAll(".cd").forEach(el=>{
+    let d=new Date(el.dataset.t)-Date.now();
+    if(d<=0){el.innerHTML="<b>The celebration has begun</b>";return}
+    const u=[["Days",864e5],["Hours",36e5],["Min",6e4],["Sec",1e3]];
+    el.innerHTML=u.map(([n,v])=>{const x=Math.floor(d/v);d-=x*v;return"<span><b>"+x+"</b><i>"+n+"</i></span>"}).join("");
+  });
+}
+tick();setInterval(tick,1000);
+
+/* RSVP through WhatsApp (no server needed) */
+for(let i=1;i<=10;i++)$("#g").add(new Option(i+(i>1?" guests":" guest"),i));
+function rsvp(){
+  const g=$("#g").value,w=nm||"We";
+  const y="Assalamualaikum! "+w+" will be attending with "+g+(g>1?" guests":" guest")+". JazakAllah for the invitation!";
+  const n="Assalamualaikum! "+w+" regret not being able to attend. Duas for you both!";
+  $("#yes").href="https://wa.me/"+C.wa+"?text="+encodeURIComponent(y);
+  $("#no").href="https://wa.me/"+C.wa+"?text="+encodeURIComponent(n);
+}
+$("#g").onchange=rsvp;rsvp();
+
+/* Falling petals and sparkles, theme changes with the section on screen */
+const cv=$("#fx"),x=cv.getContext("2d"),T={
+  hero:{c:["#f3d27a","#e8c066","#f6d5da"],k:"p"},
+  mehndi:{c:["#f7bf2d","#ff8a1f","#7bc043","#ffd76a"],k:"p"},
+  barat:{c:["#ffe08a","#f0cd7a","#fff3c4"],k:"s"},
+  walima:{c:["#ffffff","#f4c9d0","#d9bd8f"],k:"p"}};
+let th="hero",P=[],W,H,N=innerWidth<600?26:48;
+const R=Math.random;
+function size(){W=cv.width=innerWidth;H=cv.height=innerHeight}size();addEventListener("resize",size);
+function spawn(top){const t=T[th];return{x:R()*W,y:top?-12:R()*H,r:4+R()*6,vy:.5+R()*1.1,vx:R()-.5,a:R()*6,va:(R()-.5)*.06,c:t.c[Math.floor(R()*t.c.length)],k:t.k}}
+function draw(p){
+  x.save();x.translate(p.x,p.y);x.rotate(p.a);x.fillStyle=p.c;
+  if(p.k=="s"){x.globalAlpha=.4+.6*Math.abs(Math.sin(p.a*2));x.beginPath();
+    for(let i=0;i<8;i++){const r=i%2?p.r*.25:p.r*1.1;x.lineTo(Math.cos(i*Math.PI/4)*r,Math.sin(i*Math.PI/4)*r)}x.fill()}
+  else{x.globalAlpha=.85;x.beginPath();x.ellipse(0,0,p.r*1.4,p.r*.7,0,0,7);x.fill()}
+  x.restore();
+}
+function loop(){
+  x.clearRect(0,0,W,H);
+  while(P.length<N)P.push(spawn(false));
+  P.forEach((p,i)=>{p.y+=p.vy;p.x+=p.vx+Math.sin(p.a)*.5;p.a+=p.va;draw(p);if(p.y>H+14)P[i]=spawn(true)});
+  requestAnimationFrame(loop);
+}
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches)loop();
+
+/* Scroll: switch theme and reveal cards */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){th=e.target.dataset.th;e.target.classList.add("in");P=P.slice(0,N>>1)}
+}),{threshold:.45});
+document.querySelectorAll("section").forEach(s=>io.observe(s));
+
+/* Open the curtains and start music */
+const au=C.music?new Audio(C.music):null,mu=$("#mu");
+if(au){au.loop=true;au.onerror=()=>mu.style.display="none"}
+$("#seal").onclick=()=>{
+  $("#gate").classList.add("open");
+  if(au){au.play().then(()=>{mu.style.display="block"}).catch(()=>{mu.style.display="block"})}
+  setTimeout(()=>{document.body.classList.remove("lock");$("#gate").style.display="none"},1900);
+  document.querySelector(".hero").classList.add("in");
+};
+mu.onclick=()=>{au.paused?au.play():au.pause();mu.style.opacity=au.paused?.5:1};
+</script>
+</body>
+</html>
